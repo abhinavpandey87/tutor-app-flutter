@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TutorApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TutorApp extends StatelessWidget {
+  const TutorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,20 +13,21 @@ class MyApp extends StatelessWidget {
       title: 'Tutor App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const HomeScreen(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tutor App - Preschool to Class 5'),
+        title: const Text('Tutor App for Kids'),
       ),
       body: const Center(
         child: Text(
@@ -37,3 +38,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
